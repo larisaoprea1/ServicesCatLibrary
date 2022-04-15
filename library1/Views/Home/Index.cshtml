@@ -1,0 +1,109 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/index.css">
+ 
+    <title>CatLibrary</title>
+
+</head>
+<body>
+
+    
+    <!-- slide photo-->
+    <div class="slide">
+        <!-- imgs for the slide -->
+        <div class="imgslide">
+            <img src="../imageshtml/book1.jpg" id="imagine">
+        </div>
+
+        <div class="imgslide">
+            <img src="../imageshtml/book2.jpg" id="imagine">
+        </div>
+
+        <div class="imgslide">
+            <img src="../imageshtml/book3.jpg" id="imagine">
+        </div>
+
+    </div>
+    <br>
+
+    <div>
+        <!-- hidden dots for moving the imgs -->
+        <span class="move"></span>
+        <span class="move"></span>
+        <span class="move"></span>
+    </div>
+    <!-- noutati despre biblioteca-->
+    <h1 id="title1">News</h1>
+
+    <div class="news">
+
+        <div class="container">
+            <!-- tag class is for the orange div to put is in front de photo -->
+            <div class="tag">
+                <div class="textnews">
+                    <!-- you can go to the news page from here -->
+                    <p id="lib"><a asp-controller="Home" asp-action="news" >Latest updates to library service</a></p><br>
+                    <p id="par">We are currently limiting capacity to allow for two-metre physical distancing. Our online services remain available and can be accessed from anywhere including access to digital collections and online programs.</p><br>
+                    <p>We recommend to wear masks.</p>
+                    <a asp-controller="Home" asp-action="news" class="newspage">Learn more</a>
+                </div>
+            </div>
+            <img src="../imageshtml/biblioteca.jpg" id="imag">
+        </div>
+    </div>
+
+    <!-- -------------PROGRAM------------->
+    <h1 id="library"> Check our: <a asp-controller="Home" asp-action="program" >Business hours</a> to see how the schedule works</h1><br>
+
+    <div class="program">
+
+        <img src="../imageshtml/outside.png" alt="">
+        <img src="../imageshtml/cafe.jpg" alt="">
+
+    </div><br>
+
+    <p id="library"><b>Our library has several rooms and utilities for students who need information material or for people interested in reading. The rooms differ, having various uses, for example we have: readings room, library cafe, bar, outside garden for sunny days where we have staff who deal with reading for children, in addition to the place arranged outside with the garden we also have 4 kittens trained to stay clam and are loved by children and special room with computers that you can search for the book you want or just for gaining information about the subject they`re interested in.</b></p>
+    <br>
+    <div class="booksshow">
+        <h1 id="title1">Books</h1>
+        <div class="books-content">
+            <section class="border">
+                <section class="bookbg">
+                    <img class="bookn1" src="../imageshtml/gonegirl.jpg">
+                </section>
+                <h3>Books</h3>
+            </section>
+            <section class="border">
+                <section class="bookbg1">
+                    <img class="bookn2" src="../imageshtml/shatterme.jpg">
+                </section>
+                <h3>Books</h3>
+            </section>
+            <section class="border">
+                <section class="bookbg2">
+                    <img class="bookn3" src="../imageshtml/harrypotter.jpg">
+                </section>
+                <h3>Books</h3>
+            </section>
+            <section class="border">
+                <section class="bookbg3">
+                    <img class="bookn4" src="../imageshtml/itendswithus.jpg">
+                </section>
+                <h3>Books</h3>
+            </section>
+        </div>
+    </div>
+
+  
+    <script src="~/js/scriptslide.js"></script>
+</body>
+</html>

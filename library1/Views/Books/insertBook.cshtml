@@ -1,0 +1,87 @@
+﻿@model library1.Models.book
+
+@{
+    ViewData["Title"] = "insertBook";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/editinsert.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Insert Books</title>
+</head>
+<body>
+    <div class="content2">
+        <h1 id="title2">Insert a book</h1>
+    </div>
+<div class="content">
+
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="insertBook">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="book_title" class="control-label"></label> <br>
+                        <input autocomplete="off" asp-for="book_title" class="form-control" /> <br>
+                        <span asp-validation-for="book_title" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="book_pages" class="control-label"></label> <br>
+                        <input asp-for="book_pages" class="form-control"/> <br>
+                        <span asp-validation-for="book_pages" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="year" class="control-label"></label> <br>
+                        <input asp-for="year" class="form-control" /> <br>
+                        <span asp-validation-for="year" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="cover_path" class="control-label"></label> <br>
+                        <input asp-for="cover_path" class="form-control" /> <br>
+                        <span asp-validation-for="cover_path" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="placeHolded" class="control-label"></label> <br>
+                        <input asp-for="placeHolded" class="form-control" /><br> 
+                        <span asp-validation-for="placeHolded" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="country" class="control-label"></label><br>
+                        <input asp-for="country" class="form-control" /><br>
+                        <span asp-validation-for="country" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="authorID" class="control-label"></label><br>
+                        <select asp-for="authorID" class ="form-control" asp-items="ViewBag.authorID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="genreID" class="control-label"></label><br>
+                        <select asp-for="genreID" class ="form-control" asp-items="ViewBag.genreID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="mainGenreID" class="control-label"></label><br>
+                        <select asp-for="mainGenreID" class ="form-control" asp-items="ViewBag.mainGenreID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="typeOfBookID" class="control-label"></label><br>
+                        <select asp-for="typeOfBookID" class ="form-control" asp-items="ViewBag.typeOfBookID"></select>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary"/>
+                        <a asp-controller="Home" asp-action="Index" id="backhome">Back to Home</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        </div>
+</body>
+</html>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

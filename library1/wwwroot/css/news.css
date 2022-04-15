@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.titlu1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:  80px;
+    position: relative;
+    height: 200px;
+    width: 100%;
+    color: white;
+    font-size: xx-large;
+    font-weight: 600;
+    background: url("../imageshtml/back.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-shadow: -3px -3px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+#masca{
+    max-width: 100%;
+}
+/* .information{
+    display: flex;
+    width: 100%;
+    background-color: rgb(255, 255, 212);
+} */
+.new{
+    
+    display: flex;
+    width: 100%;
+    background-color: rgb(255, 255, 212);
+    padding-left: 50px;
+    /* padding-right: 50px; */
+  
+    
+}
+.col{
+    /* border-left:1px solid gray; */
+    
+    float: left;
+}
+.newsinfo{
+
+    float: left;
+    box-sizing: border-box;
+    width: 70%;
+    height: 100%;
+    background-color:rgb(255, 255, 212) ;
+    padding-bottom: 50px;
+
+}
+.keyword{ 
+
+    float: left;
+    box-sizing: border-box;
+    border-left: 5px solid transparent;
+    border-image: url(../imageshtml/backgroundorg.jpg) 30 round;
+    border-width: 8px;
+    border-radius: 5px;
+    width: 30%;
+    background-color: rgb(255, 255, 212);
+    text-decoration: none;
+    padding: 50px;
+    
+}
+.new li{
+    padding-left:1em
+    
+}
+.new ul{
+    padding-left: 20px;
+}
+
+.keyword a{
+    color: rgb(255, 135, 36);
+    text-decoration: underline;
+    
+}
+.keyword h2{
+    color: rgb(255, 115, 0);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.keyword ul{
+    list-style: none;
+}
+.listacuv li{
+    margin-top: 20px;
+}
+
+@media( max-width:991px ){
+    .new{
+        flex-direction: column-reverse;
+        padding: 1%;
+    }
+    .newsinfo{
+        width: 100%;
+      border-top: 8px solid rgb(255, 201, 157);
+      border-radius: 5px;
+    }
+    .keyword{
+        width: 100%;
+        border: none;
+    }
+
+}

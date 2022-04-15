@@ -1,0 +1,63 @@
+@{
+ Layout=null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>LogIn Page</title>
+</head>
+
+<body>
+   
+<!-- 1 big div who has 2 divs 1 for the login stage and one for going to the create an account page  -->
+
+    <div class="login">
+
+        <!-- div for the login stage -->
+        <div class="loginclass">
+
+             <div class="obiectelogin">
+                <p class="signp">  Sign In</p>
+
+                 <!-- label and input for username -->
+                 <label for="Username" class="form-label">Username:</label> 
+                 <input type="text" class="form-text" name="username" id="password">
+
+                 <!-- label and input for pass of the user -->
+                 <label for="Password" class="form-label">Password :</label> 
+                 <input type="password"  class="form-text" name="password" id="password"><br><br>
+
+                    <!-- button to sign in to the site -->
+                 <button class="button signinbtn"><span>Sign In</span></button> 
+            </div>
+        </div>
+      
+        <!-- div for information if you dont own an account to lead you to the page where you can create one -->
+        <div class="signupclass">
+
+            <div class="imagine">
+
+                <!-- click the image in the corner top right to go to the main page  -->
+                <a asp-controller="Home" asp-action="Index"> <img src="../imageshtml/catt.png" class="backhome" width="50px"height="50px"></a>
+
+            </div>
+
+            <div class="obiectesignup">
+
+                <h1 id="new">Are you new?</h1>
+                <h3 id="create">Create an account and discover a lot of books</h3>
+
+                 <!-- Press this button to go to the page where you can create an account if you re not registred yet -->
+                <a asp-controller="Autentification" asp-action="createAccount"><button class="button createbtn"><span>Create account</span></button></a>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

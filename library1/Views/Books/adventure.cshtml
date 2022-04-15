@@ -1,0 +1,61 @@
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@using X.PagedList.Mvc;
+@model IPagedList<book>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/forbooks.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Adventure Books fic</title>
+</head>
+<body>
+
+    <div class="content">
+        
+         <div class="book-cards">
+             <div>
+               <!-- button and input for searching books -->
+              
+              <form action="/Books/adventure" method="post" class="searching">
+                 <input type="search" id="search" name="search">
+                  <button class="searchb"> <i class="fa fa-search"></i> </button>
+              </form>      
+
+            </div>
+             <div class="insertb">
+                <h2>Click here to insert book :</h2><br>
+                <a asp-controller="Books" asp-action="insertBook"> <input type="button" value="Insert book"/></a>   
+               
+             </div>
+            
+             <div class="border-cards">
+
+                <!-- template for container to store each book -->
+                @foreach(var obj in Model){
+                      <div class="card">
+                        <img class="imagine" src="@obj.cover_path">
+                        <div class="header" >@obj.book_title</div>
+                           <ul class="body">
+                               <li class="author"> @obj.authors.author_firstname
+                                                   @obj.authors.author_lastname  </li>
+                               <li class="type">@obj.typeOfBooks.typeOfBook_name</li>
+                               <li class="genre"> @obj.genres.genre_name</li>
+                               <li class="mainGenre">@obj.mainGenres.mainGenre_name</li> 
+                               <li><a  asp-action="editBook" asp-route-id="@obj.bookID"><i class="fa fa-edit"></i></a></li> 
+                               <li><a onclick="return confirm('Are you sure you want to delete: @obj.book_title ?')" asp-action="deleteBook" asp-route-id="@obj.bookID"><i class="fa fa-trash"></i></a></li> 
+                           </ul>
+                     </div>
+                  }
+                 
+            </div>
+        </div>
+   </div>
+   <div>
+    @Html.PagedListPager(Model,page => Url.Action("adventure", new{page=page}))
+  </div>
+</body>
+</html>

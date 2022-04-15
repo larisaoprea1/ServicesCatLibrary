@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>@ViewData["Title"] - library</title>
+    <link rel="stylesheet" href="~/css/header.css">
+    <link rel="stylesheet" href="~/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- menu bar -->
+    <header>
+        <!-- logo -->
+        <a asp-controller="Home" asp-action="Index" >  <img class="logo" src="~/imageshtml/CatLibrary.png" alt=""></a>
+        <!-- responsive menu add-->
+        <input type="checkbox" name="" id="menubar">
+        <label for="menubar"><img src="~/imageshtml/menu.png" alt="" width="30px" height="30px"></label>
+        <!-- navbar -->
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="#" >Books</a>
+                    <ul>
+                        <li> <a asp-controller="Books" asp-action="fiction" >Fiction Books</a></li>
+                        <li> <a asp-controller="Books" asp-action="nonFiction" >Nonfiction Books</a> </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Fiction books</a>
+                    <ul>
+                        <li><a asp-controller="Books" asp-action="action" >Action</a></li>
+                        <li><a asp-controller="Books" asp-action="adventure" >Adventure</a></li>
+                        <li><a asp-controller="Books" asp-action="romance" >Romance</a></li>
+                        <li><a asp-controller="Books" asp-action="drama" >Drama</a></li>
+                        <li><a asp-controller="Books" asp-action="fhistory" >History</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Nonfiction Books</a>
+                    <ul>
+                        <li><a asp-controller="Books" asp-action="learn" >Learning</a></li>
+
+                        <li><a asp-controller="Books" asp-action="nonfhistory" >History </a></li>
+                        <li><a asp-controller="Books" asp-action="bio" >Biography </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Books Type </a>
+                    <ul>
+                        <li><a asp-controller="Books" asp-action="cbook" >Children Books</a></li>
+                        <li><a asp-controller="Books" asp-action="tbook" >Teen Books </a></li>
+                        <li><a asp-controller="Books" asp-action="abook" >Adult Books </a></li>
+                    </ul>
+                </li>
+                <li class="login"> <a asp-controller="Autentification" asp-action="login" >Login</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    @RenderBody()
+    <!-- footer, for every page, that contains information about the place where the library is, contact info and some details about the library -->
+    <footer class="info">
+        <div class="contact">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Street:Strada Rosiori de Vede nr. 3</span> City: Dolj, State/province/area: Craiova</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p> <a href="tel:+04771345634">+04771345634</a> </p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:catlibrary@gmail.com">catlibrary@gmail.com</a></p>
+            </div>
+
+        </div>
+        <div class="infocomp">
+            <a asp-controller="Home" asp-action="Index" class="logo"><img class="logo" src="~/imageshtml/CatLibrary.png" alt="" height="50px" width="200px"> </a>
+            <p class="company">
+
+                A fresh and easy way to borrow and read from your library.
+            </p>
+
+        </div>
+    </footer>
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

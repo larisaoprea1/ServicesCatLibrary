@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+body{
+    margin:0;
+    background-color: rgb(255, 255, 255);
+    background: url("../imageshtml/set3.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.createacc{
+    display: block;
+    background-color: rgb(255, 255, 255);
+    width: 800px;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 450px;
+    margin-top: 110px;
+    border: 1px solid rgba(167, 167, 167, 0.3);
+    border-radius: 1rem;
+}
+.register{
+    background-color: white;
+    width: 550px;
+    height: 300px;
+    display: block;
+    margin-right: 300px;
+    margin-bottom: 200px;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+.cr{ 
+    padding-bottom: 5px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+#start{
+    padding-top: 10px;
+    margin-left: 70px;
+
+}
+#log{
+    padding-top: 10px;
+   
+}
+#logg{
+    text-decoration: none;
+    color: rgb(255, 148, 232);
+}
+#cat{
+    float: right;
+}
+.last{
+    margin-left: 75px;
+}
+.pass{
+    
+    margin-left: 80px;
+}
+.reglabel{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(65, 65, 65);
+}
+input[type=text]{
+    padding: 7px 10px;
+    box-sizing: border-box;
+    outline: none;
+    border: 2px solid gray;
+    border-radius: .7rem;
+    box-shadow: 4px 4px 5px 2px #888888;
+    margin-bottom: 10px;
+
+}
+input[type=text]:focus{
+    box-shadow: 4px 4px 5px 2px #3a3a3a;
+    border: 3px solid black;
+    border-radius: .7rem;
+}
+
+.createnew::before,
+.createnew::after
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.createnew{
+    margin-top: 10px;
+	pointer-events: auto;
+	cursor: pointer;
+	background: #e7e7e7;
+	border: none;
+	padding: 1.1rem 1.7rem;
+	font-family: inherit;
+	font-size: small;
+	position: relative;
+	display: inline-block;
+}
+
+.createnew {
+	font-family: aktiv-grotesk-extended, sans-serif;
+	font-weight: 700;
+	border: 2px solid #000;
+	border-radius: 3rem;
+	overflow: hidden;
+	color: #fff;
+    text-align: center;
+}
+
+.createnew span {
+	position: relative;
+	mix-blend-mode: difference;
+    
+}
+
+.createnew::before {
+	content: '';
+	background: #000;
+	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.createnew:hover::before
+ {
+	transform: translate3d(0,-100%,0);
+}
+ 
+.creatacc1 {
+  padding: 20px;
+  box-shadow:
+       inset 0 -1em 2em rgba(92, 92, 92, 0.3),
+             3px 0  2px 3px rgba(167, 167, 167, 0.3),
+             0.3em 0.3em 1em rgba(92, 92, 92, 0.3);
+}

@@ -1,0 +1,343 @@
+
+body {
+    position: relative;
+    font-family: Georgia, serif;
+    background-color: beige;
+}
+
+.imgslide{
+    display: none;
+}
+
+/* Slideshow container */
+.slide {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.move {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: none;
+  transition: background-color 0.6s ease;
+}
+
+#imagine{
+    width: 100%;
+    height: 650px;
+    vertical-align: middle;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.news{
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.container {
+    width: 1000px;
+    height: 600px;
+    position:relative;
+}
+.tag {
+    border: 4px solid transparent;
+    border-image: url(../imageshtml/back.jpg) 30 round;
+    border-radius: 0.5rem;
+    margin-top: 250px;
+    margin-bottom: 250px;
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    /* background: url(backgroundorg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center; */
+    height: 300px;
+    width: 550px;
+    background-color: rgb(255, 228, 196);
+}
+
+#imag{
+    margin-left: 400px;
+    width: 600px;
+}
+.textnews{
+    text-decoration: none;
+    font-weight: 20;
+    padding-top: 15px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+.textnews a{
+    color:black;
+    font-weight: 100;
+    font-size: 30px;
+    
+    margin-top: 0px;
+}
+.textnews #lib{
+    padding-bottom: 10px;
+}
+.textnews #par{
+    margin-left: 5px;
+    text-indent: 15px;
+}
+.newspage{
+     font-weight: 100;
+     font-size: 25px;
+     color:black;
+     border: 3px solid black;
+     border-radius: .2rem;
+    
+ }
+ #title1{
+     text-align: center;
+ }
+
+
+ /* ---------------------------------------BUSINESS HOURS--------------------------------- */
+ .program{
+  margin-left: 200px;
+   
+ }
+ 
+ 
+ #library{
+     margin-left: 30px;
+     margin-right: 30px;
+     text-align: center;
+ }
+
+
+/*----------------------------------------- BOOKS SHOW -------------------------------------*/
+
+.booksshow{
+    background: beige;
+    /* min-height: 50vh; */
+    background-size: cover;
+    background-position: center;
+}
+
+.booksshow p{
+    font-size: 40;
+    font-weight: 10;
+    text-align: center;
+}
+
+.books-content{
+    align-items: center;
+    background: beige;
+    display: flex;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    margin-top: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+.books-content p{
+    font-size: 20;
+    font-weight: 10;
+    /* text-align: center; */
+}
+.border{
+    padding: 2rem 2rem 2.5rem;
+    border: 1px solid rgb(255, 255, 168);
+}
+.bookbg:hover, .bookbg1:hover, .bookbg2:hover, .bookbg3:hover{
+    border: 1px solid black;
+    box-shadow: -7px 2px 10px 1px rgb(0 0 0 / 100%);
+}
+
+.bookbg{
+    box-shadow: -7px 2px 10px 1px rgb(0 0 0 / 75%);
+    padding: 2rem 2rem 2.5rem;
+    border: 1px solid #8d8d8d;
+    background: url("../imageshtml/blur1.jpg") no-repeat; 
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.bookbg1{
+    box-shadow: -7px 2px 10px 1px rgb(0 0 0 / 75%);
+    padding: 2rem 2rem 2.5rem;
+    border: 1px solid #8d8d8d;
+    background: url("../imageshtml/blur2.jpg") no-repeat; 
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;  
+}
+.bookbg2{
+    box-shadow: -7px 2px 10px 1px rgb(0 0 0 / 75%);
+    padding: 2rem 2rem 2.5rem;
+    border: 1px solid #8d8d8d;
+    background: url("../imageshtml/blur3.jpg") no-repeat; 
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;  
+}
+.bookbg3{
+    box-shadow: -7px 2px 10px 1px rgb(0 0 0 / 75%);
+    padding: 2rem 2rem 2.5rem;
+    border: 1px solid #8d8d8d;
+    background: url("../imageshtml/blur4.jpg") no-repeat; 
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+    
+
+/* .books-content section:hover{
+    border-color: blue;
+} */
+
+.bookn1, .bookn2, .bookn3, .bookn4 {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+@media( max-width:991px ){
+    #imagine{
+        height: 500px;
+    }
+
+    #imag{
+        width: 100%;
+        height: 50%;
+        margin-left: 0px;
+    } 
+    .container {
+        width: 600px;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+    }
+    .container .tag{
+        padding: 30px;
+        margin:0;
+        height: 50%;
+        width: 100%;
+        position: relative;
+        z-index: inherit;
+    }
+    .booksshow, .books-content{
+        flex-direction: column;
+    }
+
+    .books-content{
+        margin-top: 0px;
+        
+    }
+
+    .books-content section{
+        padding-top: 20px;
+        width:234px;
+    }
+
+    .bookn1, .bookn2, .bookn2, .bookn3 {
+        max-width: 200px;
+    } 
+    .program{
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    .program img{
+        width: 100%;
+    }
+}
+
+@media( max-width:540px ){
+    #imagine{
+
+        height: 300px;
+    }
+    #imag{
+        width: 100%;
+        height: 50%;
+        margin-left: 0px;
+        
+    } 
+    .container {
+        width: 400px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .tag{
+        
+        margin: 0;
+        height: 50%;
+        width: 100%;
+        position: relative;
+        z-index: inherit;
+    }
+    #lib{
+        
+        display: flex;
+        text-align: center;
+
+    }
+    .textnews{
+        font-size: 12px;
+    }
+}
+
+@media( max-width:539px ){
+    .offer-content{
+        padding-left: 0px;
+        padding-right: 0px;
+    } 
+    .container {
+        width: 600px;
+        height: 700px;
+        
+    }
+    .textnews #lib{
+        padding-bottom: 0;
+    }
+    .textnews a{
+       
+        padding: 0;
+        margin-top: 0;
+    }
+    .textnews{
+        
+        padding-top: 0px;
+    }
+}

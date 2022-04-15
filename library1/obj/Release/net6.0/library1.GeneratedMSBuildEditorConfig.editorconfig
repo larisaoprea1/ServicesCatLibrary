@@ -1,0 +1,112 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = library1
+build_property.RootNamespace = library1
+build_property.ProjectDir = C:\Users\sdrin\OneDrive\Desktop\library1\library1\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\sdrin\OneDrive\Desktop\library1\library1
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Autentification/createAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0ZW50aWZpY2F0aW9uXGNyZWF0ZUFjY291bnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Autentification/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0ZW50aWZpY2F0aW9uXGxvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Books/abook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcYWJvb2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Books/action.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcYWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Books/adventure.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcYWR2ZW50dXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Books/bio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcYmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Books/cbook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcY2Jvb2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Books/drama.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcZHJhbWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Books/fhistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcZmhpc3RvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Books/fiction.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcZmljdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Books/learn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcbGVhcm4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Books/nonfhistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3Ncbm9uZmhpc3RvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Books/nonFiction.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3Ncbm9uRmljdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Books/romance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3Nccm9tYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Books/tbook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcdGJvb2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Home/news.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxuZXdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Home/program.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwcm9ncmFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sdrin/OneDrive/Desktop/library1/library1/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-4vct62s146
