@@ -1,0 +1,12 @@
+﻿@page
+@using library1.Areas.Identity.Pages.Account
+@model AccessDeniedModel
+@{
+    ViewData["Title"] = "Access denied";
+}
+
+<div style="margin: 315px;">
+    
+     <p class="text-danger" >You do not have access to this resource.</p>
+     <a asp-controller="Books" asp-action="Index" id="backhome">Back to Home</a>
+</div>

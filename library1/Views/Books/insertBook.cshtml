@@ -1,4 +1,72 @@
 ﻿@model library1.Models.book
+@section Scripts {
+  <script type="text/javascript">
+        function PopulateAuthors() {
+            $.ajax({
+                url: "/Books/PopulateAuthors",
+                type: "GET",
+                success: function (response) { 
+                    response["$values"].forEach(function (element) {
+                        var id = element.authorID;
+                        $("#authorsSelect").append("<option value ='"+id +"'>" + element.author_firstname + " " +  element.author_lastname + "</option>");
+                    });
+                },
+                error: function () {
+                    $("#authorsSelect").empty();
+                }
+            });
+        }
+         function PopulateMainGenre() {
+            $.ajax({
+                url: "/Books/PopulateMainGenre",
+                type: "GET",
+                success: function (response) { 
+                    response["$values"].forEach(function (element) {
+                        var id = element.mainGenreID;
+                        $("#maingenreSelect").append("<option value ='"+ id +"'>" + element.mainGenre_name + "</option>");
+                    });
+                },
+                error: function () {
+                    $("#maingenreSelect").empty();
+                }
+            });
+        }
+        function PopulateGenre() {
+            $.ajax({
+                url: "/Books/PopulateGenre",
+                type: "GET",
+                success: function (response) { 
+                    response["$values"].forEach(function (element) {
+                        var id = element.genreID;
+                        $("#genreSelect").append("<option value ='"+ id +"'>" + element.genre_name + "</option>");
+                    });
+                },
+                error: function () {
+                    $("#genreSelect").empty();
+                }
+            });
+        }
+        function PopulateType() {
+            $.ajax({
+                url: "/Books/PopulateType",
+                type: "GET",
+                success: function (response) { 
+                    response["$values"].forEach(function (element) {
+                        var id = element.typeOfBookID;
+                        $("#typeSelect").append("<option value ='"+ id +"'>" + element.typeOfBook_name + "</option>");
+                    });
+                },
+                error: function () {
+                    $("#typeSelect").empty();
+                }
+            });
+        }
+        PopulateType();
+        PopulateGenre();
+        PopulateMainGenre();
+        PopulateAuthors();
+        </script>
+}
 
 @{
     ViewData["Title"] = "insertBook";
@@ -56,20 +124,20 @@
                         <span asp-validation-for="country" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="authorID" class="control-label"></label><br>
-                        <select asp-for="authorID" class ="form-control" asp-items="ViewBag.authorID"></select>
+                        <label asp-for="authorID"  class="control-label"></label><br>
+                        <select asp-for="authorID" id="authorsSelect" class ="form-control" asp-items="ViewBag.authorID"></select>
                     </div>
                     <div class="form-group">
                         <label asp-for="genreID" class="control-label"></label><br>
-                        <select asp-for="genreID" class ="form-control" asp-items="ViewBag.genreID"></select>
+                        <select asp-for="genreID" id="genreSelect" class ="form-control" asp-items="ViewBag.genreID"></select>
                     </div>
                     <div class="form-group">
                         <label asp-for="mainGenreID" class="control-label"></label><br>
-                        <select asp-for="mainGenreID" class ="form-control" asp-items="ViewBag.mainGenreID"></select>
+                        <select asp-for="mainGenreID" id="maingenreSelect" class ="form-control" asp-items="ViewBag.mainGenreID"></select>
                     </div>
                     <div class="form-group">
                         <label asp-for="typeOfBookID" class="control-label"></label><br>
-                        <select asp-for="typeOfBookID" class ="form-control" asp-items="ViewBag.typeOfBookID"></select>
+                        <select asp-for="typeOfBookID" id="typeSelect" class ="form-control" asp-items="ViewBag.typeOfBookID"></select>
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Create" class="btn btn-primary"/>
@@ -82,6 +150,4 @@
         </div>
 </body>
 </html>
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+

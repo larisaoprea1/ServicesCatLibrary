@@ -1,0 +1,74 @@
+﻿@page
+@using library1.Areas.Identity.Pages.Account
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+    Layout=null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/createAccount.css">
+    <link rel="stylesheet" href="~/css/login.css">
+    <title>Create Account</title>
+</head>
+<body>
+  
+    <div class="createacc creatacc1">
+         
+             <!-- back to home, click the img in the corner top right in this div to return to the home page-->
+              
+             <a asp-controller="Home" asp-action="Index"><img src="~/imageshtml/catt.png" alt="" id="cat"  width="50px" height="50px"></a>
+
+              <!-- create account title -->
+
+              <div class="cr">
+                <h1 >Create your account</h1>
+                <h3 id="start">Start browsing</h3>
+              </div>
+             
+            <div class="register">
+              
+              <form id="registerForm"  asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            
+            
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+                 <label asp-for="Input.Email"></label>
+                <input asp-for="Input.Email" class="reglabel" aria-required="true" />
+               
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            
+            
+                <label asp-for="Input.Password"></label>
+                <input asp-for="Input.Password" class="reglabel"  aria-required="true" />
+               
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            
+            
+                <label asp-for="Input.ConfirmPassword"></label>
+                <input asp-for="Input.ConfirmPassword" class="reglabel"  type="password" aria-required="true" />
+                
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            
+            <button id="registerSubmit" type="submit" class="button createbtn"><span>Register</span></button>
+        </form>
+                  <h4 id="log">Do you have an account? <a id="logg" asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl">Log in.</a></h4>  <!-- <-- go to log in page -->
+              
+            </div>
+           
+
+    </div>
+
+    
+</body>
+</html>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

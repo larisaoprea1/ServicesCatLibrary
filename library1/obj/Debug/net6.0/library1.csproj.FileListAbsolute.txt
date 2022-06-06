@@ -290,3 +290,16 @@ C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\zh-Hans\Microsoft.
 C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\runtimes\win-arm\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\runtimes\win-arm64\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
+C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\Microsoft.Data.Sqlite.dll
+C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\SQLitePCLRaw.core.dll
+C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\BEST\source\repos\library1\library1\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll

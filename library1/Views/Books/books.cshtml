@@ -1,0 +1,109 @@
+@section Scripts{
+     <script type="text/javascript">
+      $(function(){
+         GetBooks();
+         $(".searchb").click(function(){
+             GetBooks();
+         });
+     }); 
+        function GetBooks() {
+            var search = $.trim($("#search").val())
+            $.ajax({
+                url: `/Books/searchBooks/${search}`,
+                type: "GET",
+                dataType: "json",
+                success: function (response) {
+                    console.log(response);
+                    $(".books").html("")
+                     response["$values"].forEach(function(value)
+                    {
+                         $(".books").append('<div class="card"><img class="imagine" src=" '+ value.cover_path +'"> <div class="header" >'+ value.book_title +'</div> <ul class="body"><li class="author"> '+ value.authors.author_firstname +" "+value.authors.author_lastname +' </li><li class="type">'+ value.typeOfBooks.typeOfBook_name +'</li><li class="genre"> '+ value.genres.genre_name +'</li> <li class="mainGenre">'+ value.mainGenres.mainGenre_name +'</li><li><a  href="/Books/editBook/'+ value.bookID +'"><i class="fa fa-edit"></i></a></li> <li><a href="/Books/deleteBook/'+ value.bookID +'"><i class="fa fa-trash"></i></a></li> <li><a href="/Books/DetailsBook/'+ value.bookID +'" > View Details </a> </li> </ul> </div> ' );
+                    }); 
+                },
+                error: function (error) {
+                    $(this).remove();
+                    console.log(error);
+                }
+            });
+        }
+       
+    </script>
+} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/forbooks.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Books</title>
+</head>
+
+<!-- onload used to load the page with the sorted books by maingenre: Adult books -->
+
+<body>
+   
+    <div class="content">
+        
+         <div class="book-cards">
+             <div>
+               <!-- button and input for searching books -->
+              
+             
+                 <input type="search" id="search" name="search">
+                 <button class="searchb"> <i class="fa fa-search"></i> </button>
+             
+       
+            </div>
+            <div class="insertb">
+                <h2>Click here to insert book :</h2><br>
+                <a asp-controller="Books" asp-action="insertBook"> <input type="button" value="Insert book"/></a>   
+               
+             </div>
+        <div class="contentmenu">    
+            <div class="menubooks">
+                <ul>
+                    <li>
+                    <a href="#" class="bookm" >Books</a>
+                    <ul>
+                        <li> <a asp-controller="Books" asp-action="fiction" >Fiction Books</a></li>
+                        <li> <a asp-controller="Books" asp-action="nonFiction" >Nonfiction Books</a> </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="bookm">Fiction books</a>
+                    <ul>
+                        <li><a asp-controller="Books" asp-action="action" >Action</a></li>
+                        <li><a asp-controller="Books" asp-action="adventure" >Adventure</a></li>
+                        <li><a asp-controller="Books" asp-action="romance" >Romance</a></li>
+                        <li><a asp-controller="Books" asp-action="drama" >Drama</a></li>
+                        <li><a asp-controller="Books" asp-action="fhistory" >History</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="bookm">Nonfiction Books</a>
+                    <ul>
+                        <li><a asp-controller="Books" asp-action="learn" >Learning</a></li>
+
+                        <li><a asp-controller="Books" asp-action="nonfhistory" >History </a></li>
+                        <li><a asp-controller="Books" asp-action="bio" >Biography </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="bookm">Books Type </a>
+                    <ul>
+                        <li><a asp-controller="Books" asp-action="cbook" >Children Books</a></li>
+                        <li><a asp-controller="Books" asp-action="tbook" >Teen Books </a></li>
+                        <li><a asp-controller="Books" asp-action="abook" >Adult Books </a></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+                <div class="border-cards books"></div>         
+            </div>   
+        </div>  
+   </div>
+</body>
+</html>

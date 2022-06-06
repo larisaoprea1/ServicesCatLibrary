@@ -1,8 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace library1.Models
 {
-    public class libraryContext : DbContext
+    public class libraryContext : IdentityDbContext<IdentityUser>
     {
         internal readonly object Alerts;
 
@@ -18,9 +20,11 @@ namespace library1.Models
         public DbSet<favoriteBooks>? favoriteBooks { get; set; }
         public DbSet<placeHoldBooks>? placeHoldBooks { get; set; }
 
-
+    
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<placeHoldBooks>()
                 .HasKey(t => new { t.bookID, t.userID });
 

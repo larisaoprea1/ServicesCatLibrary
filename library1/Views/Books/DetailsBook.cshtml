@@ -1,0 +1,79 @@
+﻿@model library1.Models.book
+
+@{
+    ViewData["Title"] = "DetailsBook";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div style="margin: 100px; ">
+<h1>DetailsBook</h1>
+
+<div>
+    <h4>book</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.book_title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.book_title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.book_pages)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.book_pages)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.year)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.year)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cover_path)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cover_path)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.placeHolded)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.placeHolded)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.country)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.country)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.authors)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.authors.author_firstname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.genres)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.genres.genre_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.mainGenres)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.mainGenres.mainGenre_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.typeOfBooks)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.typeOfBooks.typeOfBook_name)
+        </dd>
+    </dl>
+</div>
+<div> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</div>

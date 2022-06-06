@@ -1,6 +1,9 @@
+@using library1.Areas.Identity.Pages.Account
 @{
  Layout=null;
 }
+@model RegisterModel
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +16,9 @@
 <body>
   
     <div class="createacc creatacc1">
-
+         
              <!-- back to home, click the img in the corner top right in this div to return to the home page-->
-
+              
              <a asp-controller="Home" asp-action="Index"><img src="../imageshtml/catt.png" alt="" id="cat"  width="50px" height="50px"></a>
 
               <!-- create account title -->
@@ -26,36 +29,41 @@
               </div>
              
             <div class="register">
-
+                <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                   <!-- labels for first and last name -->
-                 <label class="reglabel" for="firstname">First Name:</label>
-                 <label class="reglabel last" for="lastname">Last Name:</label><br>
+                @* <label class="reglabel" for="firstname">First Name:</label>
+                 <label class="reglabel last" for="lastname">Last Name:</label><br>*@
 
                   <!-- inputs for first and last name -->
-                 <input type="text" name="" id="first">
-                 <input type="text" name="" id="first"><br>
+                 @*<input type="text" name="" id="first">
+                 <input type="text" name="" id="first"><br>*@
 
                   <!-- label and input for email -->
-                 <label class="reglabel" for="email">Email:</label><br>
-                 <input type="text" name="" id="email"><br>
+                 <label class="reglabel" asp-for="Input.Email" >Email:</label><br>
+                 <input asp-for="Input.Email" name="" id="email"><br>
+                  <span asp-validation-for="Input.Email" class="text-danger"></span>
 
                   <!-- label and input for username -->
-                 <label class="reglabel" for="username">Username:</label><br>
-                 <input type="text" name="" id="email"><br>
-
+                  @* <label class="reglabel" asp-for="Input.UserName">Username:</label><br>
+                  <input type="text" name="" asp-for="Input.UserName"><br> *@
+            
                   <!-- label for password and confirm pass -->
-                 <label class="reglabel" for="pass">Password:</label>
-                 <label class="reglabel pass" for="confpass">Confirm password:</label><br>
-
+                 <label class="reglabel"  asp-for="Input.Password">Password:</label>
+                 <label class="reglabel pass" asp-for="Input.ConfirmPassword">Confirm password:</label><br>
+                  
                  <!-- inputs for password and confirm pass -->
-                 <input type="text" name="" id="pass">
-                 <input type="text" name="" id="pass"><br>
+                 <input asp-for="Input.Password" name="" id="pass"><span asp-validation-for="Input.Password" class="text-danger"></span>
+                 <input asp-for="Input.ConfirmPassword" name="" id="pass"><span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span><br>
+                 
+
 
                  <!-- button to create account -->
-                 <button class="button createnew"> <span> Create account</span></button>
+                 <button class="button createnew" id="registerSubmit" type="submit"> <span> Create account</span></button>
                   <h4 id="log">Do you have an account? <a  asp-controller="Autentification" asp-action="login">Log in.</a></h4>  <!-- <-- go to log in page -->
- 
+              </form>
             </div>
+           
 
     </div>
 

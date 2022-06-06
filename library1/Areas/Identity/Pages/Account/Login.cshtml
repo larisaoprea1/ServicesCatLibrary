@@ -1,0 +1,87 @@
+﻿@page
+@using library1.Areas.Identity.Pages.Account
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    Layout=null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/login.css">
+    <title>LogIn Page</title>
+</head>
+
+<body>
+   
+<!-- 1 big div who has 2 divs 1 for the login stage and one for going to the create an account page  -->
+
+    <div class="login">
+
+        <!-- div for the login stage -->
+        <div class="loginclass">
+
+             <div class="obiectelogin">
+                <p class="signp">  Sign In</p>
+                <hr />
+                <form id="account" method="post">
+                  
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <label asp-for="Input.Email" class="form-label"></label>
+                    <input asp-for="Input.Email" class="form-control" aria-required="true" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                
+                    <label asp-for="Input.Password" class="form-label"></label>
+                    <input asp-for="Input.Password" class="form-control" aria-required="true" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                
+                @* <div>
+                    <div class="checkbox">
+                        <label asp-for="Input.RememberMe" class="form-label">
+                            <input class="form-check-input" asp-for="Input.RememberMe" />
+                            @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        </label>
+                    </div>
+                </div> *@
+               
+                    <button class="button createbtn" id="login-submit" type="submit"><span>Log in</span></button>
+               
+                
+            </form>
+            </div>
+        </div>
+      
+        <!-- div for information if you dont own an account to lead you to the page where you can create one -->
+        <div class="signupclass">
+
+            <div class="imagine">
+
+                <!-- click the image in the corner top right to go to the main page  -->
+                <a asp-controller="Home" asp-action="Index"> <img src="~/imageshtml/catt.png" class="backhome" width="50px"height="50px"></a>
+
+            </div>
+
+            <div class="obiectesignup">
+
+                <h1 id="new">Are you new?</h1>
+                <h3 id="create">Create an account and discover a lot of books</h3>
+
+                 <!-- Press this button to go to the page where you can create an account if you re not registred yet -->
+                <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl"><button class="button createbtn"><span>Create account</span></button></a>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
